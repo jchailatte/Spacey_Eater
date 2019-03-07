@@ -34,5 +34,9 @@ public class Planet_Movement : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other)
     {
         Debug.Log("Hit " + other.gameObject);
+        if (other.gameObject.tag == "GrowthPlanet")
+        {
+            Destroy(other.gameObject); 
+        }
     }
 }

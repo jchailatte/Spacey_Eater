@@ -22,3 +22,7 @@ This README would normally document whatever steps are necessary to get your app
 * Writing tests
 * Code review
 * Other guidelines
+
+### Sources ###
+
+* https://unity3d.com/learn/tutorials/tic-tac-toe/creating-game-board

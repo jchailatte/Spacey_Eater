@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using System;
 using System.Diagnostics;
+using UnityEngine.SceneManagement;
 
 public class TimerController : MonoBehaviour
 {
@@ -30,5 +31,16 @@ public class TimerController : MonoBehaviour
         gameTime -= Time.deltaTime;
         Text gt = this.GetComponent<Text>();
         gt.text = "" + (int)gameTime;
+        if (gameTime < 0)
+        {
+            //when time runs out, return to main game screen
+            Invoke("LoadMainGame", 0.5f);
+        }
+    }
+
+    // Load Level when time runs out
+    void LoadMainGame()
+    {
+        SceneManager.LoadScene("Game");
     }
 }

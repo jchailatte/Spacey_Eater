@@ -33,6 +33,16 @@ public class TimerController : MonoBehaviour
         gt.text = "" + (int)gameTime;
         if (gameTime < 0)
         {
+            //Converting Bool to Int
+            if (TouchInput.didWin == true)
+            {
+                PlayerPrefs.SetInt("didWin", 1);
+            }
+            else if (TouchInput.didWin == false)
+            {
+                PlayerPrefs.SetInt("didWin", 0);
+            }
+
             //when time runs out, return to main game screen
             Invoke("LoadMainGame", 0.5f);
         }

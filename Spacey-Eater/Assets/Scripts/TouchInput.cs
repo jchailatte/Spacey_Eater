@@ -5,7 +5,7 @@ using UnityEngine;
 public class TouchInput : MonoBehaviour
 {
     public float changePerClick = 1.5f;
-    public bool didWin = false;
+    public static bool didWin = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -52,7 +52,7 @@ public class TouchInput : MonoBehaviour
                             else
                             {
                                 hit.collider.gameObject.transform.localScale -= new Vector3(changePerClick, changePerClick, 0f);
-                                hit.collider.gameObject.GetComponent<CircleCollider2D>().transform.localScale -= new Vector3(changePerClick, changePerClick, 0f);
+                                //hit.collider.gameObject.GetComponent<CircleCollider2D>().transform.localScale -= new Vector3(changePerClick, changePerClick, 0f);
                                 //Debug.Log(hit.collider.GetComponent<CircleCollider2D>().transform.localScale);
                             }
                         }
@@ -79,7 +79,7 @@ public class TouchInput : MonoBehaviour
                 else
                 {
                     hit.collider.gameObject.transform.localScale -= new Vector3(changePerClick, changePerClick, 0f);
-                    hit.collider.gameObject.GetComponent<CircleCollider2D>().transform.localScale -= new Vector3(changePerClick, changePerClick, 0f);
+                    //hit.collider.gameObject.GetComponent<CircleCollider2D>().transform.localScale -= new Vector3(changePerClick, changePerClick, 0f);
                     //Debug.Log(hit.collider.GetComponent<CircleCollider2D>().transform.localScale);
                 }
             }

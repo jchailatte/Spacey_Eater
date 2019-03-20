@@ -1,18 +1,70 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Planet_Movement : MonoBehaviour
 {
 
 
     public float moveSpeed;
-    private Vector3 moveDirection; 
+    public float growthRate;
+    public float minigameGrowthRate;
+    private Vector3 moveDirection;
+    private Vector3 currentSize;
     // Start is called before the first frame update
     void Start()
     {
-        
+        //Setting current size using prefs
+        if (PlayerPrefs.HasKey("currentX") && PlayerPrefs.HasKey("currentY"))
+        {
+            currentSize = new Vector3(PlayerPrefs.GetFloat("currentX"), PlayerPrefs.GetFloat("currentY"), 1f);
+            Debug.Log("current Size is " + currentSize);
+
+            //Checking if player won the minigame
+            if (PlayerPrefs.HasKey("didWin"))
+            {
+
+                Debug.Log(PlayerPrefs.GetInt("didWin"));
+
+                //If player did win 
+                if (PlayerPrefs.GetInt("didWin") == 1)
+                {
+                    currentSize += new Vector3(minigameGrowthRate, minigameGrowthRate, 1f);
+
+                }
+
+                //If player lost
+                else if (PlayerPrefs.GetInt("didWin") == 0)
+                {
+                    currentSize -= new Vector3(minigameGrowthRate, minigameGrowthRate, 1f);
+
+                    //If losing makes them below 0, return to main scren
+                    if (currentSize.x < 0)
+                    {
+
+                    }
+                }
+
+                //If no decision/tie
+                else if (PlayerPrefs.GetInt("didWin") == -1)
+                {
+                    //Do nothign 
+                }
+            }
+            Debug.Log("Current Size is now " + currentSize);
+
+            //If a previous size has already been set, use that size, otherwise stay at original size
+            if (currentSize != new Vector3(0f, 0f, 0f))
+            {
+                transform.localScale = currentSize;
+                currentSize = new Vector3(0f, 0f, 0f);
+            }
+        }
+
+        Debug.Log("New scale is " + transform.localScale);
     }
+
 
     // Update is called once per frame
     void Update()
@@ -24,10 +76,10 @@ public class Planet_Movement : MonoBehaviour
             Vector3 moveToward = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             moveDirection = moveToward - currentPosition;
             moveDirection.z = 0;
-            moveDirection.Normalize(); 
+            moveDirection.Normalize();
         }
         Vector3 target = moveDirection * moveSpeed + currentPosition;
-        transform.position = Vector3.Lerp(currentPosition, target, Time.deltaTime); 
+        transform.position = Vector3.Lerp(currentPosition, target, Time.deltaTime);
     }
 
 
@@ -36,7 +88,30 @@ public class Planet_Movement : MonoBehaviour
         Debug.Log("Hit " + other.gameObject);
         if (other.gameObject.tag == "GrowthPlanet")
         {
-            Destroy(other.gameObject); 
+            //if hitting growth planet, increase size of main planet
+            Debug.Log(transform.localScale);
+            transform.localScale += new Vector3(growthRate, growthRate, 0f);
+            Debug.Log(transform.localScale);
+            Destroy(other.gameObject);
         }
+
+        else if (other.gameObject.tag == "Enemy")
+        {
+            //Saving player progress before skill check
+            Debug.Log("Local scale x is " + transform.localScale.x);
+            Debug.Log("Local scale y is " + transform.localScale.y);
+            PlayerPrefs.SetFloat("currentX", transform.localScale.x);
+            PlayerPrefs.SetFloat("currentY", transform.localScale.y);
+
+            Debug.Log("Start minigame");
+            Invoke("LoadRandomMinigame", 0.1f);
+        }
+
+    }
+
+    //Loading Random Minigame
+    private void LoadRandomMinigame()
+    {
+        SceneManager.LoadScene("Minigame1Scene");
     }
 }

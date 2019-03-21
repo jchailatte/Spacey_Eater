@@ -9,9 +9,21 @@ EditorBuildSettings:
     path: 
     guid: 00000000000000000000000000000000
   - enabled: 1
+    path: Assets/Scenes/Launch.unity
+    guid: 8aeefaa21ac900546846933436ac579b
+  - enabled: 1
     path: Assets/Scenes/Game.unity
     guid: 7a68699f662f6481ab9a7afea486455a
   - enabled: 1
     path: Assets/Scenes/Minigame1Scene.unity
     guid: 8cffd8f78ee8eba4480dd972de9f68da
+  - enabled: 1
+    path: Assets/Scenes/Win.unity
+    guid: 6680caf9eb2aa934da7a10a79c21d510
+  - enabled: 1
+    path: Assets/Scenes/MagicSquareScene.unity
+    guid: 048c624f158ffff4b870402165868514
+  - enabled: 1
+    path: Assets/Scenes/Lose.unity
+    guid: 5a56d704d92ffa649982476996af009a
   m_configObjects: {}

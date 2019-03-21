@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class TimerScript : MonoBehaviour
 {
@@ -11,7 +12,7 @@ public class TimerScript : MonoBehaviour
 
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
@@ -31,5 +32,20 @@ public class TimerScript : MonoBehaviour
     void GameOver()
     {
         Debug.Log("GameOVER");
+        if (OverallCont.didWin)
+        {
+            PlayerPrefs.SetInt("didWin", 1);
+        }
+        else
+        {
+            PlayerPrefs.SetInt("didWin", 0);
+        }
+        //when time runs out, return to main game screen
+        Invoke("LoadMainGame", 0.5f);
+    }
+    // Load Level when time runs out
+    void LoadMainGame()
+    {
+        SceneManager.LoadScene("Game");
     }
 }

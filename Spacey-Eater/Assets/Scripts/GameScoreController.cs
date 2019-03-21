@@ -34,7 +34,7 @@ public class GameScoreController : MonoBehaviour
     public void UpdateScore()
     {
         Text gt = this.GetComponent<Text>();
-        score = mainPlayer.transform.localScale.x * 10000f + 1;
+        score = mainPlayer.transform.localScale.x * 100f;
         gt.text = "Score: " + (int)score;
     }
 }

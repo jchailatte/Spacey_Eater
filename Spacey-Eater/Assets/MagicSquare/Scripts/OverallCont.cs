@@ -14,7 +14,6 @@ public class OverallCont : MonoBehaviour
     void Start()
     {
         int random = Random.Range(0, 5);
-        Debug.Log(random);
 
 
         squarevalues = getRandomValues(random);

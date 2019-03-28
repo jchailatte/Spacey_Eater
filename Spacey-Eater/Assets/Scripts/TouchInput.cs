@@ -6,6 +6,7 @@ public class TouchInput : MonoBehaviour
 {
     public float changePerClick = 1.5f;
     public static bool didWin = false;
+    public GameObject circle;
     // Start is called before the first frame update
     void Start()
     {
@@ -39,23 +40,8 @@ public class TouchInput : MonoBehaviour
                     RaycastHit hit;
                     if (Physics.Raycast(screenRay, out hit))
                     {
-                        if (hit.collider.gameObject.tag == "Enemy")
-                        {
-                            Debug.Log("User tapped on game object " + hit.collider.gameObject);
-                            Vector3 temp = hit.collider.gameObject.transform.localScale;
-                            if (hit.collider.gameObject.transform.localScale.x < changePerClick || hit.collider.gameObject.transform.localScale.y < changePerClick)
-                            {
-                                //if user destroys object before time runs out didWin is true
-                                didWin = true;
-                                Debug.Log("didWin is True");
-                            }
-                            else
-                            {
-                                hit.collider.gameObject.transform.localScale -= new Vector3(changePerClick, changePerClick, 0f);
-                                //hit.collider.gameObject.GetComponent<CircleCollider2D>().transform.localScale -= new Vector3(changePerClick, changePerClick, 0f);
-                                //Debug.Log(hit.collider.GetComponent<CircleCollider2D>().transform.localScale);
-                            }
-                        }
+                        Debug.Log("Temp");
+                        circle.transform.localScale -= new Vector3(changePerClick, changePerClick, 0f);
                     }
                 }
             }

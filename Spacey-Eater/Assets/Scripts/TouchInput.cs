@@ -39,8 +39,7 @@ public class TouchInput : MonoBehaviour
                     RaycastHit hit;
                     if (Physics.Raycast(screenRay, out hit))
                     {
-                        if (hit.collider.gameObject.tag == "Enemy")
-                        {
+
                             Debug.Log("User tapped on game object " + hit.collider.gameObject);
                             Vector3 temp = hit.collider.gameObject.transform.localScale;
                             if (hit.collider.gameObject.transform.localScale.x < changePerClick || hit.collider.gameObject.transform.localScale.y < changePerClick)
@@ -55,7 +54,7 @@ public class TouchInput : MonoBehaviour
                                 //hit.collider.gameObject.GetComponent<CircleCollider2D>().transform.localScale -= new Vector3(changePerClick, changePerClick, 0f);
                                 //Debug.Log(hit.collider.GetComponent<CircleCollider2D>().transform.localScale);
                             }
-                        }
+
                     }
                 }
             }
@@ -71,7 +70,7 @@ public class TouchInput : MonoBehaviour
             {
                 Debug.Log("User tapped on game object " + hit.collider.gameObject);
                 Vector3 temp = hit.collider.gameObject.transform.localScale;
-                if (hit.collider.gameObject.transform.localScale.x < changePerClick || hit.collider.gameObject.transform.localScale.y < changePerClick)
+                if (hit.collider.gameObject.transform.localScale.x < changePerClick)
                 {
                     didWin = true;
                     Debug.Log("didWin is True");

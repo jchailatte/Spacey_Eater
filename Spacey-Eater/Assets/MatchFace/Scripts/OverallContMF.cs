@@ -40,7 +40,7 @@ public class OverallContMF : MonoBehaviour
             reset();
         }
 
-        if(score >= 20)
+        if(score >= 10)
         {
             Debug.Log("GAME WIN");
         }

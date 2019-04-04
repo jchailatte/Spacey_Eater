@@ -8,6 +8,7 @@ public class OverallCont : MonoBehaviour
 
     int[] squarevalues = new int[9];
     int[] solution = new int[9];
+    public static bool didWin;
 
     Dropdown[] canvasComponents;
     // Start is called before the first frame update
@@ -21,11 +22,11 @@ public class OverallCont : MonoBehaviour
         solution = getSolution(random);
 
         canvasComponents = GetComponentsInChildren<Dropdown>();
-        for(int i=0; i<9; i++)
+        for (int i = 0; i < 9; i++)
         {
             //Debug.Log(canvasComponents[i].value);
             canvasComponents[i].value = squarevalues[i];
-            if(squarevalues[i] != 0)
+            if (squarevalues[i] != 0)
             {
                 canvasComponents[i].interactable = false;
             }
@@ -35,7 +36,7 @@ public class OverallCont : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     int[] getRandomValues(int index)
@@ -60,7 +61,7 @@ public class OverallCont : MonoBehaviour
         int[] list4 = new int[9] { 2, 9, 4, 7, 5, 3, 6, 1, 8 };
         int[] list5 = new int[9] { 2, 7, 6, 9, 5, 1, 4, 3, 8 };
 
-        int[][] lists = new int[][] { list1, list2, list3, list4, list5};
+        int[][] lists = new int[][] { list1, list2, list3, list4, list5 };
         return lists[index];
     }
 
@@ -69,7 +70,7 @@ public class OverallCont : MonoBehaviour
         Debug.Log("Within checkAnswer");
         bool flag = true;
 
-        for(int i=0; i<9; i++)
+        for (int i = 0; i < 9; i++)
         {
             if (canvasComponents[i].value != solution[i])
             {
@@ -77,9 +78,11 @@ public class OverallCont : MonoBehaviour
             }
         }
 
-        if(flag)
+        if (flag)
         {
             Debug.Log("CORRECT");
         }
+
+        didWin = flag;
     }
 }

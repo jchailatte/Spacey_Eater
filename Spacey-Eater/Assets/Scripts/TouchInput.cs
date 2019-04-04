@@ -19,6 +19,8 @@ public class TouchInput : MonoBehaviour
         {
             Debug.Log("MultiTouchSupport not enabled");
         }
+
+
     }
 
     // Update is called once per frame
@@ -32,29 +34,36 @@ public class TouchInput : MonoBehaviour
             for (int i = 0; i < nbTouches; i++)
             {
                 Touch touch = Input.GetTouch(i);
+                Vector2 pos = touch.position;
+
+                float width = (float)Screen.width / 2.0f;
+                float height = (float)Screen.height / 2.0f;
+
+                pos.x = (pos.x - width) / width;
+                pos.y = (pos.y - height) / height;
+
+                RaycastHit2D hit = Physics2D.Raycast(pos, Vector2.zero);
 
                 if (touch.phase == TouchPhase.Began)
                 {
                     Ray screenRay = Camera.main.ScreenPointToRay(touch.position);
-                    RaycastHit hit;
-                    if (Physics.Raycast(screenRay, out hit))
+
+                    if (hit.collider.gameObject.tag == "Enemy")
                     {
-
-                            Debug.Log("User tapped on game object " + hit.collider.gameObject);
-                            Vector3 temp = hit.collider.gameObject.transform.localScale;
-                            if (hit.collider.gameObject.transform.localScale.x < changePerClick || hit.collider.gameObject.transform.localScale.y < changePerClick)
-                            {
-                                //if user destroys object before time runs out didWin is true
-                                didWin = true;
-                                Debug.Log("didWin is True");
-                            }
-                            else
-                            {
-                                hit.collider.gameObject.transform.localScale -= new Vector3(changePerClick, changePerClick, 0f);
-                                //hit.collider.gameObject.GetComponent<CircleCollider2D>().transform.localScale -= new Vector3(changePerClick, changePerClick, 0f);
-                                //Debug.Log(hit.collider.GetComponent<CircleCollider2D>().transform.localScale);
-                            }
-
+                        Debug.Log("User tapped on game object " + hit.collider.gameObject);
+                        Vector3 temp = hit.collider.gameObject.transform.localScale;
+                        if (hit.collider.gameObject.transform.localScale.x < changePerClick || hit.collider.gameObject.transform.localScale.y < changePerClick)
+                        {
+                            //if user destroys object before time runs out didWin is true
+                            didWin = true;
+                            Debug.Log("didWin is True");
+                        }
+                        else
+                        {
+                            hit.collider.gameObject.transform.localScale -= new Vector3(changePerClick, changePerClick, 0f);
+                            //hit.collider.gameObject.GetComponent<CircleCollider2D>().transform.localScale -= new Vector3(changePerClick, changePerClick, 0f);
+                            //Debug.Log(hit.collider.GetComponent<CircleCollider2D>().transform.localScale);
+                        }
                     }
                 }
             }
@@ -70,7 +79,7 @@ public class TouchInput : MonoBehaviour
             {
                 Debug.Log("User tapped on game object " + hit.collider.gameObject);
                 Vector3 temp = hit.collider.gameObject.transform.localScale;
-                if (hit.collider.gameObject.transform.localScale.x < changePerClick)
+                if (hit.collider.gameObject.transform.localScale.x < changePerClick || hit.collider.gameObject.transform.localScale.y < changePerClick)
                 {
                     didWin = true;
                     Debug.Log("didWin is True");

@@ -11,6 +11,7 @@ public class OverallContMF : MonoBehaviour
     int score;
     public Text scoreText;
     public Text solText;
+    public static bool didWin;
 
     Dropdown[] canvasComponents;
     // Start is called before the first frame update
@@ -43,6 +44,7 @@ public class OverallContMF : MonoBehaviour
         if(score >= 10)
         {
             Debug.Log("GAME WIN");
+            didWin = true;
         }
 
     }

@@ -112,8 +112,8 @@ public class Planet_Movement : MonoBehaviour
     //Loading Random Minigame
     private void LoadRandomMinigame()
     {
-        int random = Random.Range(0, 2);
-        Debug.Log(random);
+        int random = Random.Range(0, 3);
+        Debug.Log("Random number is:" + random);
 
         if (random == 0)
         {
@@ -121,7 +121,11 @@ public class Planet_Movement : MonoBehaviour
         }
         else if (random == 1)
         {
-            SceneManager.LoadScene("MagicSquareScene");
+            SceneManager.LoadScene("MagicSquareMini");
+        }
+        else if (random ==2)
+        {
+            SceneManager.LoadScene("MatchFace");
         }
         else
         {

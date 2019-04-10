@@ -1300,6 +1300,7 @@ MonoBehaviour:
   moveSpeed: 2
   growthRate: 0.01
   minigameGrowthRate: 0.03
+  gPlanet: {fileID: 7904225672124547072, guid: 563292a14211c4755b6175c5ae2e3d64, type: 3}
 --- !u!58 &2012564387
 CircleCollider2D:
   m_ObjectHideFlags: 0

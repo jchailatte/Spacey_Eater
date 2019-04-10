@@ -12,6 +12,7 @@ public class Planet_Movement : MonoBehaviour
     public float minigameGrowthRate;
     private Vector3 moveDirection;
     private Vector3 currentSize;
+   // public  GameObject gPlanet;
     // Start is called before the first frame update
     void Start()
     {
@@ -89,6 +90,8 @@ public class Planet_Movement : MonoBehaviour
             //if hitting growth planet, increase size of main planet
             Debug.Log(transform.localScale);
             transform.localScale += new Vector3(growthRate, growthRate, 0f);
+           // gPlanet.GetComponent<>
+
             Debug.Log(transform.localScale);
             Destroy(other.gameObject);
 

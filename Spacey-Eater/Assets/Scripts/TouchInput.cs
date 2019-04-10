@@ -5,12 +5,11 @@ using UnityEngine;
 public class TouchInput : MonoBehaviour
 {
     public float changePerClick = 1.5f;
-    public static bool didWin = false;
     // Start is called before the first frame update
     void Start()
     {
         bool supportsMultiTouch = Input.multiTouchEnabled;
-        didWin = false;
+        TimerController.didWin = false;
         if (supportsMultiTouch)
         {
             Debug.Log("MultiTouchSupport enabled");
@@ -55,7 +54,7 @@ public class TouchInput : MonoBehaviour
                         if (hit.collider.gameObject.transform.localScale.x < changePerClick || hit.collider.gameObject.transform.localScale.y < changePerClick)
                         {
                             //if user destroys object before time runs out didWin is true
-                            didWin = true;
+                            TimerController.didWin = true;
                             Debug.Log("didWin is True");
                         }
                         else
@@ -81,7 +80,7 @@ public class TouchInput : MonoBehaviour
                 Vector3 temp = hit.collider.gameObject.transform.localScale;
                 if (hit.collider.gameObject.transform.localScale.x < changePerClick || hit.collider.gameObject.transform.localScale.y < changePerClick)
                 {
-                    didWin = true;
+                    TimerController.didWin = true;
                     Debug.Log("didWin is True");
                 }
                 else

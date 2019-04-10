@@ -12,6 +12,7 @@ public class Planet_Movement : MonoBehaviour
     public float minigameGrowthRate;
     private Vector3 moveDirection;
     private Vector3 currentSize;
+    private int random;
     // Start is called before the first frame update
     void Start()
     {
@@ -47,7 +48,7 @@ public class Planet_Movement : MonoBehaviour
                 //If no decision/tie
                 else if (PlayerPrefs.GetInt("didWin") == -1)
                 {
-                    //Do nothign 
+                    //Do nothing
                 }
             }
             Debug.Log("Current Size is now " + currentSize);
@@ -112,20 +113,30 @@ public class Planet_Movement : MonoBehaviour
     //Loading Random Minigame
     private void LoadRandomMinigame()
     {
-        int random = Random.Range(0, 3);
+        //Commenting to discard randomness during testing
+        //int random = Random.Range(0, 3);
+        random = PlayerPrefs.GetInt("random");
         Debug.Log("Random number is:" + random);
 
         if (random == 0)
         {
+            PlayerPrefs.SetInt("random", random + 1);
             SceneManager.LoadScene("Minigame1Scene");
         }
         else if (random == 1)
         {
+            PlayerPrefs.SetInt("random", random + 1);
             SceneManager.LoadScene("MagicSquareMini");
         }
         else if (random ==2)
         {
+            PlayerPrefs.SetInt("random", random + 1);
             SceneManager.LoadScene("MatchFace");
+        }
+        else if (random == 3)
+        {
+            PlayerPrefs.SetInt("random", 0);
+            SceneManager.LoadScene("Minigame2Scene");
         }
         else
         {

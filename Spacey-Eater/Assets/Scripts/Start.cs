@@ -10,8 +10,8 @@ public class Start : MonoBehaviour
         Application.LoadLevel("Game");
         PlayerPrefs.SetFloat("currentX", 0.01f);
         PlayerPrefs.SetFloat("currentY", 0.01f);
-        PlayerPrefs.SetInt("didWin", -1); 
-
+        PlayerPrefs.SetInt("didWin", -1);
+        PlayerPrefs.SetInt("random", 0);
 
     }
 

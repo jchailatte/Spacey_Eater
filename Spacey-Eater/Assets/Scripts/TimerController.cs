@@ -12,6 +12,7 @@ public class TimerController : MonoBehaviour
     private static float gameTime;
     private Text timeGT;
     public float maxGameTime = 10f;
+    public static bool didWin;
     private void Awake()
     {
         Text gt = this.GetComponent<Text>();
@@ -34,11 +35,11 @@ public class TimerController : MonoBehaviour
         if (gameTime < 0)
         {
             //Converting Bool to Int
-            if (TouchInput.didWin == true)
+            if (didWin == true)
             {
                 PlayerPrefs.SetInt("didWin", 1);
             }
-            else if (TouchInput.didWin == false)
+            else if (didWin == false)
             {
                 PlayerPrefs.SetInt("didWin", 0);
             }

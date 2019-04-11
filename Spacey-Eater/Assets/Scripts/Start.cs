@@ -1,18 +1,17 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.iOS;
 
 public class Start : MonoBehaviour
 {
-    // Start is called before the first frame update
-    public void Launch()
+        public void Launch()
     {
         Application.LoadLevel("Game");
         PlayerPrefs.SetFloat("currentX", 0.01f);
         PlayerPrefs.SetFloat("currentY", 0.01f);
         PlayerPrefs.SetInt("didWin", -1);
         PlayerPrefs.SetInt("random", 0);
-
     }
 
     public void ToLaunch()

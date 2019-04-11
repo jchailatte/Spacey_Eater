@@ -34,7 +34,7 @@ public class ArrowController : MonoBehaviour
     void Update()
     {
         //Add accleration
-        x += -Input.acceleration.z;
+        x += -Input.acceleration.y;
         z += Input.acceleration.x;
 
         if (Input.anyKey)

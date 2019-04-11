@@ -44,7 +44,7 @@ public class OverallContMF : MonoBehaviour
         if(score >= 10)
         {
             Debug.Log("GAME WIN");
-            didWin = true;
+            TimerController.didWin = true;
         }
 
     }

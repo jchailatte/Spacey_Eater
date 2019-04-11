@@ -12,11 +12,11 @@ public class Planet_Movement : MonoBehaviour
     public float minigameGrowthRate;
     private Vector3 moveDirection;
     private Vector3 currentSize;
-<<<<<<< HEAD
-   // public  GameObject gPlanet;
-=======
+
+    public  GameObject gPlanet;
+
     private int random;
->>>>>>> fd17aaa2cf86c75e1efca3706ead3c38896d97ee
+
     // Start is called before the first frame update
     void Start()
     {
@@ -127,7 +127,7 @@ public class Planet_Movement : MonoBehaviour
         if (random == 0)
         {
             PlayerPrefs.SetInt("random", random + 1);
-            SceneManager.LoadScene("Minigame1Scene");
+            SceneManager.LoadScene("Minigame2Scene");
         }
         else if (random == 1)
         {
@@ -142,7 +142,7 @@ public class Planet_Movement : MonoBehaviour
         else if (random == 3)
         {
             PlayerPrefs.SetInt("random", 0);
-            SceneManager.LoadScene("Minigame2Scene");
+            SceneManager.LoadScene("Minigame1Scene");
         }
         else
         {

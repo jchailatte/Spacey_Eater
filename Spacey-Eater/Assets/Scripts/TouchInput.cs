@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+
 
 public class TouchInput : MonoBehaviour
 {
@@ -55,6 +57,9 @@ public class TouchInput : MonoBehaviour
                         {
                             //if user destroys object before time runs out didWin is true
                             TimerController.didWin = true;
+                            PlayerPrefs.SetInt("didWin", 1);
+                            SceneManager.LoadScene("Game");
+
                             Debug.Log("didWin is True");
                         }
                         else
@@ -81,7 +86,10 @@ public class TouchInput : MonoBehaviour
                 if (hit.collider.gameObject.transform.localScale.x < changePerClick || hit.collider.gameObject.transform.localScale.y < changePerClick)
                 {
                     TimerController.didWin = true;
+
                     Debug.Log("didWin is True");
+                    PlayerPrefs.SetInt("didWin", 1);
+                    SceneManager.LoadScene("Game");
                 }
                 else
                 {

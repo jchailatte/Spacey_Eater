@@ -19,23 +19,23 @@ public class ArrowController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        leftArrow = this.gameObject.transform.GetChild(0).gameObject;
-        upArrow = this.gameObject.transform.GetChild(1).gameObject;
-        downArrow = this.gameObject.transform.GetChild(2).gameObject;
-        rightArrow = this.gameObject.transform.GetChild(3).gameObject;
+        leftArrow = this.gameObject.transform.GetChild(0).gameObject;//0
+        upArrow = this.gameObject.transform.GetChild(1).gameObject;//1
+        downArrow = this.gameObject.transform.GetChild(2).gameObject;//2
+        rightArrow = this.gameObject.transform.GetChild(3).gameObject;//3
 
         changeArrow();
 
         score = 0;
-        threshold = 10f;
+        threshold = 3f;
     }
 
     // Update is called once per frame
     void Update()
     {
         //Add accleration
-        x += Input.acceleration.x;
-        z += -Input.acceleration.z;
+        x += -Input.acceleration.z;
+        z += Input.acceleration.x;
 
         if (Input.anyKey)
         {
@@ -94,7 +94,7 @@ public class ArrowController : MonoBehaviour
                 break;
         }
         //Send winning result to timer controller
-        if (score > 5)
+        if (score > 4)
         {
             TimerController.didWin = true;
         }
@@ -122,19 +122,19 @@ public class ArrowController : MonoBehaviour
         {
             case 1:
                 leftArrow.SetActive(true);
-                arrowNum = 1;
+                arrowNum = 1;//1
                 break;
             case 2:
                 rightArrow.SetActive(true);
-                arrowNum = 2;
+                arrowNum = 2;//2
                 break;
             case 3:
                 downArrow.SetActive(true);
-                arrowNum = 3;
+                arrowNum = 3;//3
                 break;
             case 4:
                 upArrow.SetActive(true);
-                arrowNum = 4;
+                arrowNum = 4;//4
                 break;
             default:
                 Debug.Log("Switch Error");
@@ -143,3 +143,7 @@ public class ArrowController : MonoBehaviour
 
     }
 }
+
+
+
+//left is up, right is down, up is right, down is left 

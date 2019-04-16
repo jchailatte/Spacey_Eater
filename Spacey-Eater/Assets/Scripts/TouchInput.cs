@@ -7,6 +7,10 @@ using UnityEngine.SceneManagement;
 public class TouchInput : MonoBehaviour
 {
     public float changePerClick = 1.5f;
+
+    //For explosion
+    public GameObject explosion;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -53,12 +57,13 @@ public class TouchInput : MonoBehaviour
                     {
                         Debug.Log("User tapped on game object " + hit.collider.gameObject);
                         Vector3 temp = hit.collider.gameObject.transform.localScale;
-                        if (hit.collider.gameObject.transform.localScale.x < changePerClick || hit.collider.gameObject.transform.localScale.y < changePerClick)
+                        if (hit.collider.gameObject.transform.localScale.x < changePerClick*5 || hit.collider.gameObject.transform.localScale.y < changePerClick*5)
                         {
                             //if user destroys object before time runs out didWin is true
                             TimerController.didWin = true;
                             PlayerPrefs.SetInt("didWin", 1);
-                            SceneManager.LoadScene("Game");
+                            Destroy(hit.collider.gameObject);
+                            Instantiate(explosion, hit.collider.gameObject.transform.position, hit.collider.gameObject.transform.rotation);
 
                             Debug.Log("didWin is True");
                         }
@@ -83,13 +88,16 @@ public class TouchInput : MonoBehaviour
             {
                 Debug.Log("User tapped on game object " + hit.collider.gameObject);
                 Vector3 temp = hit.collider.gameObject.transform.localScale;
-                if (hit.collider.gameObject.transform.localScale.x < changePerClick || hit.collider.gameObject.transform.localScale.y < changePerClick)
+                if (hit.collider.gameObject.transform.localScale.x < changePerClick*5 || hit.collider.gameObject.transform.localScale.y < changePerClick*5)
                 {
                     TimerController.didWin = true;
 
                     Debug.Log("didWin is True");
                     PlayerPrefs.SetInt("didWin", 1);
-                    SceneManager.LoadScene("Game");
+
+                    Destroy(hit.collider.gameObject);
+                    Instantiate(explosion, hit.collider.gameObject.transform.position, hit.collider.gameObject.transform.rotation);
+
                 }
                 else
                 {

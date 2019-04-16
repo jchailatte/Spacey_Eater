@@ -8,7 +8,7 @@ public class ScreamInputController : MonoBehaviour
     AudioClip micInput;
     bool hasMic;
     public float sensitivity;
-    public bool didWin;
+    bool didWin;
     GameObject inputVol;
 
 

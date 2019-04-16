@@ -6,11 +6,18 @@ public class BulletController : MonoBehaviour
 {
     private Transform bullet;
     public GameObject explosion;
+    public AudioSource _audioSource1;
+    public AudioSource _audioSource2;
     public float speed;
     // Start is called before the first frame update
     void Start()
     {
         bullet = GetComponent<Transform>();
+        _audioSource1 = GetComponent<AudioSource>();
+        _audioSource2 = GetComponent<AudioSource>();
+
+        _audioSource1.Play();
+        Debug.Log("Audio source played:");
     }
 
     // Update is called once per frame
@@ -29,6 +36,7 @@ public class BulletController : MonoBehaviour
         if (other.tag == "Enemy")
         {
             Instantiate(explosion, new Vector3(other.gameObject.transform.position.x, other.gameObject.transform.position.y, -7f), other.gameObject.transform.rotation);
+            _audioSource2.Play();
             Destroy(other.gameObject);
             Destroy(gameObject);
         }

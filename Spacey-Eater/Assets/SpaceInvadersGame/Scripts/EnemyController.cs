@@ -36,6 +36,7 @@ public class EnemyController : MonoBehaviour
         if (enemyHolder.childCount == 0)
         {
             TimerController.didWin = true;
+            PlayerPrefs.SetInt("didWin", 1);
             //win game return to main game
             Debug.Log("Win Game");
             SceneManager.LoadScene("Game"); 

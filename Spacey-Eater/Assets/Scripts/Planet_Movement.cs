@@ -17,9 +17,19 @@ public class Planet_Movement : MonoBehaviour
 
     private int random;
 
+    //For audio
+    public AudioSource _audioSourceWin;
+    public AudioSource _audioSourceLose;
+
     // Start is called before the first frame update
     void Start()
     {
+        Debug.Log("Start called");
+        AudioSource[] audioSources = GetComponents<AudioSource>();
+        _audioSourceWin = audioSources[0];
+        _audioSourceLose = audioSources[1];
+        _audioSourceLose.Play();
+
         //Setting current size using prefs
         if (PlayerPrefs.HasKey("currentX") && PlayerPrefs.HasKey("currentY"))
         {
@@ -36,6 +46,8 @@ public class Planet_Movement : MonoBehaviour
                 if (PlayerPrefs.GetInt("didWin") == 1)
                 {
                     currentSize += new Vector3(minigameGrowthRate, minigameGrowthRate, 1f);
+                    Debug.Log("Win Audio");
+                    _audioSourceWin.Play();
 
                     CheckScoreForWin(currentSize);
 
@@ -45,6 +57,9 @@ public class Planet_Movement : MonoBehaviour
                 else if (PlayerPrefs.GetInt("didWin") == 0)
                 {
                     currentSize -= new Vector3(minigameGrowthRate, minigameGrowthRate, 1f);
+
+                    Debug.Log("Lose Audio");
+                    _audioSourceLose.Play();
 
                     CheckScoreForWin(currentSize);
                 }
@@ -67,6 +82,7 @@ public class Planet_Movement : MonoBehaviour
 
         Debug.Log("New scale is " + transform.localScale);
     }
+  
 
 
     // Update is called once per frame
@@ -127,7 +143,7 @@ public class Planet_Movement : MonoBehaviour
         if (random == 0)
         {
             PlayerPrefs.SetInt("random", random + 1);
-            SceneManager.LoadScene("Minigame2Scene");
+            SceneManager.LoadScene("SpaceInvaders");
         }
         else if (random == 1)
         {
@@ -140,6 +156,16 @@ public class Planet_Movement : MonoBehaviour
             SceneManager.LoadScene("MatchFace");
         }
         else if (random == 3)
+        {
+            PlayerPrefs.SetInt("random", random + 1);
+            SceneManager.LoadScene("ScreamGame");
+        }
+        else if (random == 4)
+        {
+            PlayerPrefs.SetInt("random", random + 1);
+            SceneManager.LoadScene("Minigame2Scene");
+        }
+        else if (random == 5)
         {
             PlayerPrefs.SetInt("random", 0);
             SceneManager.LoadScene("Minigame1Scene");

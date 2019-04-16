@@ -13,6 +13,7 @@ public class TimerController : MonoBehaviour
     private Text timeGT;
     public float maxGameTime = 10f;
     public static bool didWin;
+
     private void Awake()
     {
         Text gt = this.GetComponent<Text>();
@@ -23,7 +24,6 @@ public class TimerController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
     }
 
     // Update is called once per frame

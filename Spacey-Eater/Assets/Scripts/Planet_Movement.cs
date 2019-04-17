@@ -143,12 +143,12 @@ public class Planet_Movement : MonoBehaviour
         if (random == 0)
         {
             PlayerPrefs.SetInt("random", random + 1);
-            SceneManager.LoadScene("SpaceInvaders");
+            SceneManager.LoadScene("FlipPuzzle");
         }
         else if (random == 1)
         {
             PlayerPrefs.SetInt("random", random + 1);
-            SceneManager.LoadScene("MagicSquareMini");
+            SceneManager.LoadScene("SpaceInvaders");
         }
         else if (random ==2)
         {
@@ -167,8 +167,13 @@ public class Planet_Movement : MonoBehaviour
         }
         else if (random == 5)
         {
-            PlayerPrefs.SetInt("random", 0);
+            PlayerPrefs.SetInt("random", random+1);
             SceneManager.LoadScene("Minigame1Scene");
+        }
+        else if (random == 6)
+        {
+            PlayerPrefs.SetInt("random", 0);
+            SceneManager.LoadScene("MagicSquareMini");
         }
         else
         {

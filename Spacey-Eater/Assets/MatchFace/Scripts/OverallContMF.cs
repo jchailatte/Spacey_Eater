@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class OverallContMF : MonoBehaviour
 {
@@ -43,8 +44,11 @@ public class OverallContMF : MonoBehaviour
 
         if(score >= 10)
         {
-            Debug.Log("GAME WIN");
             TimerController.didWin = true;
+            PlayerPrefs.SetInt("didWin", 1);
+            //win game return to main game
+            Debug.Log("Win Game");
+            SceneManager.LoadScene("Game");
         }
 
     }

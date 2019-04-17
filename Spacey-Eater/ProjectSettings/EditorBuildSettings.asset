@@ -35,4 +35,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/ScreamGame.unity
     guid: 61af054264a7ae3478fb26a3ad3b55c5
+  - enabled: 1
+    path: Assets/Scenes/FlipPuzzle.unity
+    guid: 6d5829b555982bd49b0d9a39c686e679
   m_configObjects: {}

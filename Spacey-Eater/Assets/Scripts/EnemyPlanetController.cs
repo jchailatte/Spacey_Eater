@@ -32,8 +32,10 @@ public class EnemyPlanetController : MonoBehaviour
         float xMax = camera.aspect * camera.orthographicSize;
         float xRange = camera.aspect * camera.orthographicSize * 1.75f;
         float yMax = camera.orthographicSize - 0.5f;
+        float yRange = camera.aspect * camera.orthographicSize * 1.75f;
 
-        Vector3 enemyPlanetPos = new Vector3(cameraPos.x + Random.Range(xMax - xRange, xMax), Random.Range(-yMax, yMax), enemyPlanetPrefab.transform.position.z);
+
+        Vector3 enemyPlanetPos = new Vector3(cameraPos.x + Random.Range(xMax - xRange, xMax), Random.Range(yMax-yRange, yMax), enemyPlanetPrefab.transform.position.z);
         Instantiate(enemyPlanetPrefab, enemyPlanetPos, Quaternion.identity);
 
 

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using UnityEngine.EventSystems;
 
 public class OverallContMF : MonoBehaviour
 {
@@ -20,6 +21,18 @@ public class OverallContMF : MonoBehaviour
     {
         score = 0;
         reset();
+        StartCoroutine(Blink());
+    }
+
+    public IEnumerator Blink()
+    {
+        while(true)
+        {
+            solText.text = "";
+            yield return new WaitForSeconds(0.7f);
+            solText.text = solution;
+            yield return new WaitForSeconds(0.7f);
+        }
     }
 
     // Update is called once per frame
@@ -38,7 +51,7 @@ public class OverallContMF : MonoBehaviour
         if(answer == solution)
         {
             score++;
-            scoreText.text = "Score: " + score;
+            scoreText.text = "Score: " + score+"/10";
             reset();
         }
 

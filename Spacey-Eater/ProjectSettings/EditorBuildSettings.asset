@@ -32,7 +32,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/SpaceInvaders.unity
     guid: 155e8cfb3ed35b84585e4911e18ce06c
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/ScreamGame.unity
     guid: 61af054264a7ae3478fb26a3ad3b55c5
   - enabled: 1

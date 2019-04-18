@@ -18,7 +18,7 @@ public class GrowthPlanetController : MonoBehaviour
 
     }
 
-    private void OnBecameInvisible()
+    public void OnBecameInvisible()
     {
         Destroy(gameObject);
     }

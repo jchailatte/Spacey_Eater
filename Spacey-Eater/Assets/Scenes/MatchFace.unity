@@ -136,11 +136,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Button(MiddleLeft)
       objectReference: {fileID: 0}
-    - target: {fileID: 5153360486906374135, guid: 6915beb38eecda14fa97daae7a714033,
-        type: 3}
-      propertyPath: m_Text
-      value: :*(
-      objectReference: {fileID: 0}
     - target: {fileID: 5153360487414016298, guid: 6915beb38eecda14fa97daae7a714033,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -199,12 +194,12 @@ PrefabInstance:
     - target: {fileID: 5153360487414016298, guid: 6915beb38eecda14fa97daae7a714033,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 240
+      value: 294
       objectReference: {fileID: 0}
     - target: {fileID: 5153360487414016298, guid: 6915beb38eecda14fa97daae7a714033,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -0.000061035
       objectReference: {fileID: 0}
     - target: {fileID: 5153360487414016298, guid: 6915beb38eecda14fa97daae7a714033,
         type: 3}
@@ -246,6 +241,11 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 7846977959299075808, guid: 6915beb38eecda14fa97daae7a714033,
+        type: 3}
+      propertyPath: buttonText
+      value: 
+      objectReference: {fileID: 1497572754}
     - target: {fileID: 5153360487414016297, guid: 6915beb38eecda14fa97daae7a714033,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
@@ -276,11 +276,11 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
-    - target: {fileID: 7846977959299075808, guid: 6915beb38eecda14fa97daae7a714033,
+    - target: {fileID: 5153360486906374135, guid: 6915beb38eecda14fa97daae7a714033,
         type: 3}
-      propertyPath: buttonText
-      value: 
-      objectReference: {fileID: 1497572754}
+      propertyPath: m_Text
+      value: :*(
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6915beb38eecda14fa97daae7a714033, type: 3}
 --- !u!224 &217774994 stripped
@@ -335,8 +335,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -220, y: 183.2}
-  m_SizeDelta: {x: 350, y: 166.5}
+  m_AnchoredPosition: {x: -434.7, y: 421.4}
+  m_SizeDelta: {x: 658.6, y: 447}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &264996934
 MonoBehaviour:
@@ -360,11 +360,11 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 100
+    m_FontSize: 150
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 1
-    m_MaxSize: 100
+    m_MaxSize: 150
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
@@ -391,11 +391,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Button(BottomMiddle)
-      objectReference: {fileID: 0}
-    - target: {fileID: 5153360486906374135, guid: 6915beb38eecda14fa97daae7a714033,
-        type: 3}
-      propertyPath: m_Text
-      value: :D
       objectReference: {fileID: 0}
     - target: {fileID: 5153360487414016298, guid: 6915beb38eecda14fa97daae7a714033,
         type: 3}
@@ -455,12 +450,12 @@ PrefabInstance:
     - target: {fileID: 5153360487414016298, guid: 6915beb38eecda14fa97daae7a714033,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -150
+      value: -367
       objectReference: {fileID: 0}
     - target: {fileID: 5153360487414016298, guid: 6915beb38eecda14fa97daae7a714033,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 150
+      value: 211
       objectReference: {fileID: 0}
     - target: {fileID: 5153360487414016298, guid: 6915beb38eecda14fa97daae7a714033,
         type: 3}
@@ -502,6 +497,11 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 7846977959299075808, guid: 6915beb38eecda14fa97daae7a714033,
+        type: 3}
+      propertyPath: buttonText
+      value: 
+      objectReference: {fileID: 1308653334}
     - target: {fileID: 5153360487414016297, guid: 6915beb38eecda14fa97daae7a714033,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
@@ -532,11 +532,11 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
-    - target: {fileID: 7846977959299075808, guid: 6915beb38eecda14fa97daae7a714033,
+    - target: {fileID: 5153360486906374135, guid: 6915beb38eecda14fa97daae7a714033,
         type: 3}
-      propertyPath: buttonText
-      value: 
-      objectReference: {fileID: 1308653334}
+      propertyPath: m_Text
+      value: :D
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6915beb38eecda14fa97daae7a714033, type: 3}
 --- !u!224 &366368740 stripped
@@ -591,8 +591,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 330, y: 0}
-  m_SizeDelta: {x: 15, y: 500}
+  m_AnchoredPosition: {x: 450, y: 0}
+  m_SizeDelta: {x: 15, y: 900}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &405055074
 MonoBehaviour:
@@ -655,11 +655,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Button(MiddleMiddle)
       objectReference: {fileID: 0}
-    - target: {fileID: 5153360486906374135, guid: 6915beb38eecda14fa97daae7a714033,
-        type: 3}
-      propertyPath: m_Text
-      value: XD
-      objectReference: {fileID: 0}
     - target: {fileID: 5153360487414016298, guid: 6915beb38eecda14fa97daae7a714033,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -718,7 +713,7 @@ PrefabInstance:
     - target: {fileID: 5153360487414016298, guid: 6915beb38eecda14fa97daae7a714033,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -150
+      value: -367
       objectReference: {fileID: 0}
     - target: {fileID: 5153360487414016298, guid: 6915beb38eecda14fa97daae7a714033,
         type: 3}
@@ -765,6 +760,11 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 7846977959299075808, guid: 6915beb38eecda14fa97daae7a714033,
+        type: 3}
+      propertyPath: buttonText
+      value: 
+      objectReference: {fileID: 1250854652}
     - target: {fileID: 5153360487414016297, guid: 6915beb38eecda14fa97daae7a714033,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
@@ -795,11 +795,11 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
-    - target: {fileID: 7846977959299075808, guid: 6915beb38eecda14fa97daae7a714033,
+    - target: {fileID: 5153360486906374135, guid: 6915beb38eecda14fa97daae7a714033,
         type: 3}
-      propertyPath: buttonText
-      value: 
-      objectReference: {fileID: 1250854652}
+      propertyPath: m_Text
+      value: XD
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6915beb38eecda14fa97daae7a714033, type: 3}
 --- !u!224 &446381743 stripped
@@ -952,10 +952,10 @@ RectTransform:
   m_Father: {fileID: 876908497}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0.5}
-  m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 400, y: 83}
-  m_SizeDelta: {x: 500, y: 15}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -350, y: 150}
+  m_SizeDelta: {x: 900, y: 15}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &678685318
 MonoBehaviour:
@@ -1005,11 +1005,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Button(MiddleRight)
-      objectReference: {fileID: 0}
-    - target: {fileID: 5153360486906374135, guid: 6915beb38eecda14fa97daae7a714033,
-        type: 3}
-      propertyPath: m_Text
-      value: :|
       objectReference: {fileID: 0}
     - target: {fileID: 5153360487414016298, guid: 6915beb38eecda14fa97daae7a714033,
         type: 3}
@@ -1069,12 +1064,12 @@ PrefabInstance:
     - target: {fileID: 5153360487414016298, guid: 6915beb38eecda14fa97daae7a714033,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -560
+      value: -997
       objectReference: {fileID: 0}
     - target: {fileID: 5153360487414016298, guid: 6915beb38eecda14fa97daae7a714033,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 5153360487414016298, guid: 6915beb38eecda14fa97daae7a714033,
         type: 3}
@@ -1116,6 +1111,11 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 7846977959299075808, guid: 6915beb38eecda14fa97daae7a714033,
+        type: 3}
+      propertyPath: buttonText
+      value: 
+      objectReference: {fileID: 95110337}
     - target: {fileID: 5153360487414016297, guid: 6915beb38eecda14fa97daae7a714033,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
@@ -1146,11 +1146,11 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
-    - target: {fileID: 7846977959299075808, guid: 6915beb38eecda14fa97daae7a714033,
+    - target: {fileID: 5153360486906374135, guid: 6915beb38eecda14fa97daae7a714033,
         type: 3}
-      propertyPath: buttonText
-      value: 
-      objectReference: {fileID: 95110337}
+      propertyPath: m_Text
+      value: :|
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6915beb38eecda14fa97daae7a714033, type: 3}
 --- !u!224 &710497417 stripped
@@ -1170,11 +1170,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Button(BottomRight)
-      objectReference: {fileID: 0}
-    - target: {fileID: 5153360486906374135, guid: 6915beb38eecda14fa97daae7a714033,
-        type: 3}
-      propertyPath: m_Text
-      value: :x
       objectReference: {fileID: 0}
     - target: {fileID: 5153360487414016298, guid: 6915beb38eecda14fa97daae7a714033,
         type: 3}
@@ -1234,12 +1229,12 @@ PrefabInstance:
     - target: {fileID: 5153360487414016298, guid: 6915beb38eecda14fa97daae7a714033,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -560
+      value: -997
       objectReference: {fileID: 0}
     - target: {fileID: 5153360487414016298, guid: 6915beb38eecda14fa97daae7a714033,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 150
+      value: 222
       objectReference: {fileID: 0}
     - target: {fileID: 5153360487414016298, guid: 6915beb38eecda14fa97daae7a714033,
         type: 3}
@@ -1281,6 +1276,11 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 7846977959299075808, guid: 6915beb38eecda14fa97daae7a714033,
+        type: 3}
+      propertyPath: buttonText
+      value: 
+      objectReference: {fileID: 1697910000}
     - target: {fileID: 5153360487414016297, guid: 6915beb38eecda14fa97daae7a714033,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
@@ -1311,11 +1311,11 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
-    - target: {fileID: 7846977959299075808, guid: 6915beb38eecda14fa97daae7a714033,
+    - target: {fileID: 5153360486906374135, guid: 6915beb38eecda14fa97daae7a714033,
         type: 3}
-      propertyPath: buttonText
-      value: 
-      objectReference: {fileID: 1697910000}
+      propertyPath: m_Text
+      value: :x
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6915beb38eecda14fa97daae7a714033, type: 3}
 --- !u!224 &793031752 stripped
@@ -1488,10 +1488,10 @@ RectTransform:
   m_Father: {fileID: 876908497}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0.5}
-  m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 400, y: -83}
-  m_SizeDelta: {x: 500, y: 15}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -350, y: -150}
+  m_SizeDelta: {x: 900, y: 15}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &998121509
 MonoBehaviour:
@@ -1613,7 +1613,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: -220, y: 25.725006}
+  m_AnchoredPosition: {x: -297.1, y: 210.73}
   m_SizeDelta: {x: 250, y: 78.55}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1326939989
@@ -1717,7 +1717,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: -220, y: 102}
+  m_AnchoredPosition: {x: -638.94995, y: 213}
   m_SizeDelta: {x: 250, y: 74}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1395356741
@@ -1796,8 +1796,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 500, y: 0}
-  m_SizeDelta: {x: 15, y: 500}
+  m_AnchoredPosition: {x: 750, y: 0}
+  m_SizeDelta: {x: 15, y: 900}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1423372790
 MonoBehaviour:
@@ -1974,11 +1974,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Button(TopRight)
       objectReference: {fileID: 0}
-    - target: {fileID: 5153360486906374135, guid: 6915beb38eecda14fa97daae7a714033,
-        type: 3}
-      propertyPath: m_Text
-      value: -.-
-      objectReference: {fileID: 0}
     - target: {fileID: 5153360487414016298, guid: 6915beb38eecda14fa97daae7a714033,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2037,12 +2032,12 @@ PrefabInstance:
     - target: {fileID: 5153360487414016298, guid: 6915beb38eecda14fa97daae7a714033,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -560
+      value: -997
       objectReference: {fileID: 0}
     - target: {fileID: 5153360487414016298, guid: 6915beb38eecda14fa97daae7a714033,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -150
+      value: -225
       objectReference: {fileID: 0}
     - target: {fileID: 5153360487414016298, guid: 6915beb38eecda14fa97daae7a714033,
         type: 3}
@@ -2084,6 +2079,11 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 7846977959299075808, guid: 6915beb38eecda14fa97daae7a714033,
+        type: 3}
+      propertyPath: buttonText
+      value: 
+      objectReference: {fileID: 373826311}
     - target: {fileID: 5153360487414016297, guid: 6915beb38eecda14fa97daae7a714033,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
@@ -2114,11 +2114,11 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
-    - target: {fileID: 7846977959299075808, guid: 6915beb38eecda14fa97daae7a714033,
+    - target: {fileID: 5153360486906374135, guid: 6915beb38eecda14fa97daae7a714033,
         type: 3}
-      propertyPath: buttonText
-      value: 
-      objectReference: {fileID: 373826311}
+      propertyPath: m_Text
+      value: -.-
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6915beb38eecda14fa97daae7a714033, type: 3}
 --- !u!224 &1841077037 stripped
@@ -2162,11 +2162,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Button(TopMiddle)
-      objectReference: {fileID: 0}
-    - target: {fileID: 5153360486906374135, guid: 6915beb38eecda14fa97daae7a714033,
-        type: 3}
-      propertyPath: m_Text
-      value: T_T
       objectReference: {fileID: 0}
     - target: {fileID: 5153360487414016298, guid: 6915beb38eecda14fa97daae7a714033,
         type: 3}
@@ -2226,12 +2221,12 @@ PrefabInstance:
     - target: {fileID: 5153360487414016298, guid: 6915beb38eecda14fa97daae7a714033,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -150
+      value: -367
       objectReference: {fileID: 0}
     - target: {fileID: 5153360487414016298, guid: 6915beb38eecda14fa97daae7a714033,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -150
+      value: -237
       objectReference: {fileID: 0}
     - target: {fileID: 5153360487414016298, guid: 6915beb38eecda14fa97daae7a714033,
         type: 3}
@@ -2273,6 +2268,11 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 7846977959299075808, guid: 6915beb38eecda14fa97daae7a714033,
+        type: 3}
+      propertyPath: buttonText
+      value: 
+      objectReference: {fileID: 239708768}
     - target: {fileID: 5153360487414016297, guid: 6915beb38eecda14fa97daae7a714033,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
@@ -2303,11 +2303,11 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
-    - target: {fileID: 7846977959299075808, guid: 6915beb38eecda14fa97daae7a714033,
+    - target: {fileID: 5153360486906374135, guid: 6915beb38eecda14fa97daae7a714033,
         type: 3}
-      propertyPath: buttonText
-      value: 
-      objectReference: {fileID: 239708768}
+      propertyPath: m_Text
+      value: T_T
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6915beb38eecda14fa97daae7a714033, type: 3}
 --- !u!224 &1932497387 stripped
@@ -2350,8 +2350,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 400, y: 0}
-  m_SizeDelta: {x: 500, y: 500}
+  m_AnchoredPosition: {x: 610, y: 0}
+  m_SizeDelta: {x: 900, y: 900}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2018986404
 MonoBehaviour:
@@ -2424,8 +2424,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -220, y: -190}
-  m_SizeDelta: {x: 350, y: 200}
+  m_AnchoredPosition: {x: -467.4, y: -190}
+  m_SizeDelta: {x: 593.1, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2021017317
 MonoBehaviour:
@@ -2449,11 +2449,11 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: 5398c4f1f36a9b34786a093246c3ba32, type: 3}
-    m_FontSize: 50
+    m_FontSize: 70
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 5
-    m_MaxSize: 50
+    m_MaxSize: 70
     m_Alignment: 1
     m_AlignByGeometry: 0
     m_RichText: 1
@@ -2480,11 +2480,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Button(BottomLeft)
-      objectReference: {fileID: 0}
-    - target: {fileID: 5153360486906374135, guid: 6915beb38eecda14fa97daae7a714033,
-        type: 3}
-      propertyPath: m_Text
-      value: :P
       objectReference: {fileID: 0}
     - target: {fileID: 5153360487414016298, guid: 6915beb38eecda14fa97daae7a714033,
         type: 3}
@@ -2544,12 +2539,12 @@ PrefabInstance:
     - target: {fileID: 5153360487414016298, guid: 6915beb38eecda14fa97daae7a714033,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 240
+      value: 294
       objectReference: {fileID: 0}
     - target: {fileID: 5153360487414016298, guid: 6915beb38eecda14fa97daae7a714033,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 150
+      value: 211
       objectReference: {fileID: 0}
     - target: {fileID: 5153360487414016298, guid: 6915beb38eecda14fa97daae7a714033,
         type: 3}
@@ -2591,6 +2586,11 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 7846977959299075808, guid: 6915beb38eecda14fa97daae7a714033,
+        type: 3}
+      propertyPath: buttonText
+      value: 
+      objectReference: {fileID: 1888306649}
     - target: {fileID: 5153360487414016297, guid: 6915beb38eecda14fa97daae7a714033,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
@@ -2621,11 +2621,11 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
-    - target: {fileID: 7846977959299075808, guid: 6915beb38eecda14fa97daae7a714033,
+    - target: {fileID: 5153360486906374135, guid: 6915beb38eecda14fa97daae7a714033,
         type: 3}
-      propertyPath: buttonText
-      value: 
-      objectReference: {fileID: 1888306649}
+      propertyPath: m_Text
+      value: :P
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6915beb38eecda14fa97daae7a714033, type: 3}
 --- !u!224 &2024972232 stripped
@@ -2778,12 +2778,12 @@ PrefabInstance:
     - target: {fileID: 5153360487414016298, guid: 6915beb38eecda14fa97daae7a714033,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 240
+      value: 294
       objectReference: {fileID: 0}
     - target: {fileID: 5153360487414016298, guid: 6915beb38eecda14fa97daae7a714033,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -150
+      value: -237
       objectReference: {fileID: 0}
     - target: {fileID: 5153360487414016298, guid: 6915beb38eecda14fa97daae7a714033,
         type: 3}
@@ -2825,6 +2825,11 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 7846977959299075808, guid: 6915beb38eecda14fa97daae7a714033,
+        type: 3}
+      propertyPath: buttonText
+      value: 
+      objectReference: {fileID: 406786951}
     - target: {fileID: 5153360487414016297, guid: 6915beb38eecda14fa97daae7a714033,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
@@ -2855,10 +2860,5 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
-    - target: {fileID: 7846977959299075808, guid: 6915beb38eecda14fa97daae7a714033,
-        type: 3}
-      propertyPath: buttonText
-      value: 
-      objectReference: {fileID: 406786951}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6915beb38eecda14fa97daae7a714033, type: 3}

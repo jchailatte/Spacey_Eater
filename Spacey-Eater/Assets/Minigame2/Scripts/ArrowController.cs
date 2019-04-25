@@ -104,8 +104,9 @@ public class ArrowController : MonoBehaviour
         }
     }
 
-    void changeArrow()
+    public void changeArrow()
     {
+        score++;
         //Reset Accelerometer
         x = 0;
         z = 0;

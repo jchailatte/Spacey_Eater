@@ -151,7 +151,7 @@ public class Planet_Movement : MonoBehaviour
             PlayerPrefs.SetInt("random", random + 1);
             SceneManager.LoadScene("SpaceInvaders");
         }
-        else if (random ==2)
+        else if (random == 2)
         {
             PlayerPrefs.SetInt("random", random + 1);
             SceneManager.LoadScene("MatchFace");
@@ -159,19 +159,9 @@ public class Planet_Movement : MonoBehaviour
         else if (random == 3)
         {
             PlayerPrefs.SetInt("random", random + 1);
-            SceneManager.LoadScene("ScreamGame");
-        }
-        else if (random == 4)
-        {
-            PlayerPrefs.SetInt("random", random + 1);
-            SceneManager.LoadScene("Minigame2Scene");
-        }
-        else if (random == 5)
-        {
-            PlayerPrefs.SetInt("random", random+1);
             SceneManager.LoadScene("Minigame1Scene");
         }
-        else if (random == 6)
+        else if (random == 4)
         {
             PlayerPrefs.SetInt("random", 0);
             SceneManager.LoadScene("MagicSquareMini");

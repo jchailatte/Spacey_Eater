@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 7904225672124547078}
   - component: {fileID: 7904225672124547079}
   - component: {fileID: 1886425313019310542}
+  - component: {fileID: 3584424505473862428}
   m_Layer: 0
   m_Name: growthPlanet
   m_TagString: GrowthPlanet
@@ -110,3 +111,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   growthRate: 0.005
+--- !u!95 &3584424505473862428
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7904225672124547072}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: aeec41300d6ae4fa3bb725b223bb1a9c, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

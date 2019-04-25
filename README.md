@@ -5,10 +5,10 @@ Spacey Eaters
 A mobile game that is simulating WarioWare   
 
 ### Assets ###
-Art
+
 * https://assetstore.unity.com/packages/2d/textures-materials/simple-spaceships-81051
 * https://opengameart.org/content/explosion-set-1-m484-games
-Sounds
+   
 * https://opengameart.org/content/space-boss-battle-theme
 * https://opengameart.org/content/won-orchestral-winning-jingle
 * https://freesound.org/people/Skylar1146/sounds/395378/

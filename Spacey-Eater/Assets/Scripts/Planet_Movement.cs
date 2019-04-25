@@ -99,6 +99,7 @@ public class Planet_Movement : MonoBehaviour
         }
         Vector3 target = moveDirection * moveSpeed + currentPosition;
         transform.position = Vector3.Lerp(currentPosition, target, Time.deltaTime);
+        CheckScoreForWin(transform.localScale);
     }
 
 
@@ -184,7 +185,7 @@ public class Planet_Movement : MonoBehaviour
     //Check score for win
     private void CheckScoreForWin(Vector3 vector3)
     {
-        if (currentSize.x > .21f)
+        if (currentSize.x > .41f)
         {
             SceneManager.LoadScene("Win");
         }

@@ -13,6 +13,10 @@ public class Start : MonoBehaviour
         PlayerPrefs.SetInt("didWin", -1);
         PlayerPrefs.SetInt("random", 0);
     }
+        public void LaunchTutorial()
+    {
+        Application.LoadLevel("Tutorial");
+    }
 
     public void ToLaunch()
     {

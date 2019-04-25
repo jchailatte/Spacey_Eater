@@ -307,7 +307,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 989700950}
-        m_MethodName: LaunchTutorial
+        m_MethodName: Launch
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

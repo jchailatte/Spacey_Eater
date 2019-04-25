@@ -185,11 +185,11 @@ public class Planet_Movement : MonoBehaviour
     //Check score for win
     private void CheckScoreForWin(Vector3 vector3)
     {
-        if (currentSize.x > .41f)
+        if (vector3.x > .31f)
         {
             SceneManager.LoadScene("Win");
         }
-        else if (currentSize.x < 0.00f)
+        else if (vector3.x < 0.00f)
         {
             SceneManager.LoadScene("Lose");
         }

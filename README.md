@@ -2,7 +2,11 @@
 
 ### What is this repository for? ###
 Spacey Eaters   
-A mobile game that is simulating WarioWare   
+A mobile game that is simulating WarioWare 
+
+Note:
+We had 10 minigames which all worked on Unity but b/c of errors (mostly permission stuff)     
+after building onto the phone, we removed 5 of them. 
 
 ### Assets ###
 
